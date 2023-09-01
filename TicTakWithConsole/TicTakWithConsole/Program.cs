@@ -26,7 +26,7 @@ namespace TicTakWithConsole
         {
             
             for (int r = 0; r < ROWS; r++)
-            {
+            { 
                 Console.WriteLine("-------------");
                 for (int c = 0; c < COLUMNS; c++)
                 {
