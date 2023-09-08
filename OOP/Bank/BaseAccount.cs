@@ -9,7 +9,7 @@ namespace OOP.Bank
 {
     internal class BaseAccount
     {
-       
+        public static List<BankAccount> bankAccounts = new List<BankAccount>();
         public string AccountNumber { get; }
         public double Balance { get; private set; }
         public Currency Currency { get; }

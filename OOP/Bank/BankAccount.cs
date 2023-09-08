@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Person;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,16 @@ namespace OOP.Bank
 {
     internal class BankAccount : BaseAccount
     {
-        public List <BankAccount> bankAccounts= new List<BankAccount>();
+        
         private BankLimit bankLimit;
-
+        public Customers Customers { get; set; }
         public BankAccount(string accountNumber, Currency currency, BankLimit limit)
             : base(accountNumber, currency)
         {
             bankLimit = limit;
+            Customers = new Customers();
         }
-        public void AddaToBank(BankAccount bankAccount)
+        public void AddToBank(BankAccount bankAccount)
         {
             bankAccounts.Add(bankAccount);
         }
@@ -25,6 +27,17 @@ namespace OOP.Bank
         {
             if (bankLimit.IsInDayLimit(amount))
             { base.DoDeposit(amount); }
+        }
+        public static BankAccount CheckExist(string accNumber)
+        {
+            foreach (BankAccount bankAccount in bankAccounts)
+            {
+                if (bankAccount.AccountNumber==accNumber)
+                {
+                    return bankAccount;
+                }
+            }
+            return null;
         }
     }
 }

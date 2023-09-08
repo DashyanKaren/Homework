@@ -10,7 +10,7 @@ namespace OOP.Person
     internal class Employee : Person
     {
 
-        private static List<Employee> employees=new List<Employee>();
+       
 
         public int WorkExperience { get; set; }
         public double MonthlySalary { get; set; }
@@ -20,14 +20,11 @@ namespace OOP.Person
         {
 
         }
-        public void AddCustomerEmployee(Employee employee)
-        {
-            employees.Add(employee);
-        }
+        
 
         public override string ToString()
         {
-            return "I'm Emoployee";
+            return "I'm Employee";
         }
     }
 }

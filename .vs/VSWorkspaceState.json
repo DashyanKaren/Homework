@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\FirstInACA\\ClassLibrary1",
-    "\\FirstInACA\\ClassLibrary2",
-    "\\OOP",
-    "\\OOP\\Bank",
-    "\\OOP\\Person",
-    "\\People"
+    "\\InheretedClass"
   ],
-  "SelectedNode": "\\OOP",
+  "SelectedNode": "\\InheretedClass\\MyBase.cs",
   "PreviewInSolutionExplorer": false
 }
