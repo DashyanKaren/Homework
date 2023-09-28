@@ -8,7 +8,7 @@ namespace OOP.Person
 {
     internal class Student : Person
     {
-       
+       public Action Action { get; set; }
         public Student(string firstName, string lastName, int age) : base(firstName, lastName, age)
         {
            

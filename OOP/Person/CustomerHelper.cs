@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,8 +10,10 @@ namespace OOP.Person
 {
     public static class CustomerHelper
     {
+
         public static void AddClient(BankLimit bankLimit)
         {
+            
             Student student = new Student(Console.ReadLine(), Console.ReadLine(), int.Parse(Console.ReadLine()));
             Console.WriteLine("please give account number");
             var accnumber = Console.ReadLine();
@@ -20,7 +23,10 @@ namespace OOP.Person
                 BankAccount bankAccount = new BankAccount(accnumber, (Currency)currencyresult, bankLimit);
                 bankAccount.Customers.AddCustomer(student);
                 bankAccount.AddToBank(bankAccount);
+                
             }
+            
+
         }
 
         public static void AddClientEmp(BankLimit bankLimit)
@@ -35,6 +41,7 @@ namespace OOP.Person
                 bankAccount1.Customers.AddCustomer(employee);
                 bankAccount1.AddToBank(bankAccount1);
             }
+            employee.ChangeName();
         }
         public static double DoOperation()
         {

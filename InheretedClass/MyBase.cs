@@ -9,8 +9,8 @@ namespace InheretedClass
 {
     public class Person
     {
-        private int Age { get; set; }
-        private string Name { get; set; }
+        protected int Age { get; set; }
+        protected string Name { get; set; }
         public Person(int age, string name)
         {
             Age = age;
@@ -26,14 +26,13 @@ namespace InheretedClass
     public class Worker : Person
     {
         private double Salary { get; set; }
-        private int Age { get; set; }
-        private string Name { get; set; }
+        // private int Age { get; set; }
+        // private string Name { get; set; }
         public Worker(int age, string name, double salary) : base(age, name) 
         {
-            Age = age;
-            Name=name;
             Salary = salary;
         }
+
         public void GetOlder()
         {
             Age++;
@@ -42,6 +41,7 @@ namespace InheretedClass
         {
            return $"hello my Name is {Name}, I am {Age} years old, my salary is {Salary} dollars!!!";
         }
+       
 
 
     }

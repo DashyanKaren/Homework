@@ -9,7 +9,7 @@ namespace OOP.Person
     
     internal class Employee : Person
     {
-
+        public Action Action;  
        
 
         public int WorkExperience { get; set; }
@@ -18,9 +18,13 @@ namespace OOP.Person
 
         public Employee(string firstName, string lastName, int age) : base(firstName, lastName, age)
         {
-
+            
         }
-        
+
+        public void ChangeName() 
+        {
+            //Action?.Invoke();
+        }
 
         public override string ToString()
         {

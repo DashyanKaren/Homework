@@ -10,7 +10,7 @@ namespace InheretedClass
             Worker worker = new Worker(23, "Sargis", 300);
             worker.GetOlder();
             worker.GetOlder();
-            Console.WriteLine(  worker.ToString());
+            Console.WriteLine( worker.ToString());
         }
     }
 }
