@@ -44,17 +44,17 @@ namespace LINQ
             }
             return false;
         }
-        public static int? MyAverage<T>(this IEnumerable<T> values)
+        public static int? MyAverage<T>(this IEnumerable<int?> values)
         {
             if (values == null)
             {
-                throw new Exception("null")
+                throw new Exception("null");
             }
-            int sum = default;
+            int sum = 0;
             int state = 0;
             foreach (var item in values)
             {
-                sum += item;
+                sum +=(int)item;
                 state++;
             }
             return sum / state;

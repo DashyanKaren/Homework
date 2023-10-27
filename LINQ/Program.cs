@@ -20,8 +20,9 @@ namespace LINQ
             var myall = list.MyAll(e => e > 0);
             //var a = list.All(e => e > 4);
 
-            var myanny=list.MyAny(e => e > 10);
-           var myaverage= list.Average(Func(List<>));
+            var myanny = list.MyAny(e => e > 10);
+            var myaverage = list;
+
             foreach (var item in list)
             {
                 Console.WriteLine($"Item {item}");
@@ -29,8 +30,8 @@ namespace LINQ
             Console.WriteLine();
 
             Console.WriteLine($"All is {myall}");
-             Console.WriteLine($"Any is {myanny}");
-          //  Console.WriteLine($"asEnumerable-{}");
+            Console.WriteLine($"Any is {myanny}");
+            Console.WriteLine($"asEnumerable-{myaverage}");
 
         }
     }
