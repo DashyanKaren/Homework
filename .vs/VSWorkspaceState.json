@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyCountDownEvent",
+    "\\MyCountDownEvent\\ProcPriority",
+    "\\MyCountDownEvent\\ProcPriority\\ProcPriority"
   ],
-  "SelectedNode": "\\C:\\Users\\arsen\\source\\repos\\HomeWork",
+  "SelectedNode": "\\MyCountDownEvent\\ProcPriority\\ProcPriority\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
