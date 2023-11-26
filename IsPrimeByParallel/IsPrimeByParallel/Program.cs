@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Diagnostics;
 
 namespace IsPrimeByParallel
 {
@@ -6,9 +7,29 @@ namespace IsPrimeByParallel
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ParallelCompute(100));
-        }
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            var p=ParallelCompute(1000);
+            stopwatch.Stop();
+            Console.WriteLine(  $"{stopwatch.ElapsedMilliseconds} Parallel  {p}");
+            stopwatch.Reset();
+            stopwatch.Start();
+            var np=NonParallelCompute(1000);
+            stopwatch.Stop();
+            Console.WriteLine($"{stopwatch.ElapsedMilliseconds} nonParallel {np}");
 
+        }
+        static int NonParallelCompute(int x)
+        {
+            int sum = 0;
+            for (int i = 0; i < x; i++)
+            {
+                if (IsPrime(i))
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
         static int ParallelCompute(int x)
         {
             int sum = 0;
