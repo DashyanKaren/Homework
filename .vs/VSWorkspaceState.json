@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MyCountDownEvent",
-    "\\MyCountDownEvent\\ProcPriority",
-    "\\MyCountDownEvent\\ProcPriority\\ProcPriority"
+    "\\Iterator"
   ],
-  "SelectedNode": "\\MyCountDownEvent\\ProcPriority\\ProcPriority\\Program.cs",
+  "SelectedNode": "\\Iterator",
   "PreviewInSolutionExplorer": false
 }
